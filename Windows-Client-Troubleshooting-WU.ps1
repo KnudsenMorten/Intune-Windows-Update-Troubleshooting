@@ -185,22 +185,22 @@ if ($RunWUReset) {
 # === DSREG STATUS ===
 if ($RunDSREGCheck) {
     Write-Host ""
-    Write-Host "🔐 Checking Azure AD Join Status..."
+    Write-Host "🔐 Checking Entra ID Join Status..."
     $aad = dsregcmd /status | Select-String "AzureAdJoined"
     $hybrid = dsregcmd /status | Select-String "DomainJoined"
 
     Write-Host ""
     if ($aad -match "YES") {
-        Write-Host "✅ Device is Azure AD joined."
+        Write-Host "✅ Device is Enta ID joined."
     } else {
-        Write-Host "❌ Not Azure AD joined."
+        Write-Host "❌ Not Entra ID joined."
     }
 
     Write-Host ""
     if ($hybrid -match "YES") {
-        Write-Host "✅ Device is Hybrid AAD joined."
+        Write-Host "✅ Device is Hybrid joined."
     } else {
-        Write-Host "❌ Not Hybrid AAD joined."
+        Write-Host "❌ Not Hybrid joined."
     }
 }
 
