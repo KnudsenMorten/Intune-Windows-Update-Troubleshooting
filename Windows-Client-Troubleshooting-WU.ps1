@@ -25,7 +25,7 @@
 
 # === CONFIGURATION ===
 $CollectCompleteLogs = $false
-$CollectWULogsOnly = $true
+$CollectWULogsOnly = $false
 $RunSystemRepairs = $false
 $RunWUReset = $true
 $RunPolicySimulation = $true
@@ -211,10 +211,6 @@ if ($RunIMECheck) {
     Write-Host "🛠 Restarting Intune Management Extension..."
     Stop-Service IntuneManagementExtension -Force -ErrorAction SilentlyContinue -WarningAction SilentlyContinue
     Start-Service IntuneManagementExtension -ErrorAction SilentlyContinue -WarningAction SilentlyContinue
-
-    Stop-Service IntuneManagementExtension -Force
-    Remove-Item -Path "C:\Program Files (x86)\Microsoft Intune Management Extension\Policies" -Recurse -Force -ErrorAction SilentlyContinue
-    Start-Service IntuneManagementExtension
 }
 
 # === INTUNE MANAGEMENT EXTENSION REPAIR ===
