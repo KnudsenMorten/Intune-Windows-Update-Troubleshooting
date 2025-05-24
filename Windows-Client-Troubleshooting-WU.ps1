@@ -1,4 +1,29 @@
-﻿# === CONFIGURATION ===
+﻿<#
+    .NAME
+    Windows Client Troubleshooting (
+
+    .SYNOPSIS
+
+    .NOTES
+    
+    .VERSION
+    1.0
+    
+    .AUTHOR
+    Morten Knudsen, Microsoft MVP - https://mortenknudsen.net
+
+    .LICENSE
+    Licensed under the MIT license.
+
+    .PROJECTURI
+    https://github.com/KnudsenMorten/Intune-Windows-Update-Troubleshooting
+
+
+    .WARRANTY
+    Use at your own risk, no warranty given!
+#>
+
+# === CONFIGURATION ===
 $CollectCompleteLogs = $false
 $CollectWULogsOnly = $true
 $RunSystemRepairs = $false

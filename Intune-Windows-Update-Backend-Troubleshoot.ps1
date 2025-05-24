@@ -1,3 +1,27 @@
+<#
+    .NAME
+    Intune/AutoPatch/WHfB Troubleshooting (
+
+    .SYNOPSIS
+
+    .NOTES
+    
+    .VERSION
+    1.0
+    
+    .AUTHOR
+    Morten Knudsen, Microsoft MVP - https://mortenknudsen.net
+
+    .LICENSE
+    Licensed under the MIT license.
+
+    .PROJECTURI
+    https://github.com/KnudsenMorten/Intune-Windows-Update-Troubleshooting
+
+
+    .WARRANTY
+    Use at your own risk, no warranty given!
+#>
 
 # First, ensure you're connected to Graph with the right scopes:
 Connect-MgGraph -Scopes "DeviceManagementManagedDevices.ReadWrite.All", "WindowsUpdates.ReadWrite.All"
